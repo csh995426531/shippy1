@@ -40,17 +40,20 @@ func main() {
 
 	service.Init(
 		micro.Action(func(c *cli.Context) {
-			name := c.String("name")
-			email := c.String("email")
-			password := c.String("password")
-			company := c.String("company")
+			//name := c.String("name")
+			//email := c.String("email")
+			//password := c.String("password")
+			//company := c.String("company")
+			user := pb.User{
+				Name:                 "Ewan Valentine",
+				Company:              "BBC",
+				Email:                "ewan.valentine89@gmail.com",
+				Password:             "Testing123",
+			}
 
-			r, err := client.Create(context.TODO(), &pb.User{
-				Name:                 name,
-				Company:              company,
-				Email:                email,
-				Password:             password,
-			})
+			r, err := client.Create(context.TODO(), &user)
+			log.Printf("user %T, %#v", user, user)
+
 			if err != nil {
 				log.Fatalf("Could not create: %v", err)
 			}
