@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"errors"
 	"golang.org/x/crypto/bcrypt"
 	"log"
 	pb "shippy/user-service/proto/user"
@@ -66,5 +67,19 @@ func (h *handler) Auth(ctx context.Context, req *pb.User, resp *pb.Token) error 
 }
 
 func (h *handler) ValidateToken(ctx context.Context, req *pb.Token, resp *pb.Token) error {
+
+	claims, err := h.tokenService.Decode(req.Token)
+	if err != nil {
+		return err
+	}
+
+	log.Println(claims)
+
+	if claims.User.Id == "" {
+		return errors.New("invalid user")
+	}
+
+	resp.Valid = true
+
 	return nil
 }

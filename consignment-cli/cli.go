@@ -49,10 +49,10 @@ func main() {
 
 	// 在命令行中指定新的货物信息 json 文件
 	infoFile := DEFAULT_INFO_FILE
-	token := "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyIjp7ImlkIjoiNjAxODA1ZTYtNjhmNS00MTM1LWFmZWUtNzA5MWNjZTdiYTgyIiwibmFtZSI6IkV3YW4gVmFsZW50aW5lIiwiY29tcGFueSI6IkJCQyIsImVtYWlsIjoiZXdhbi52YWxlbnRpbmU4OUBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYSQxMCQyMmUucVJNN3VuNGloa29KbmRFaWd1ZjJZdTllQmloS3djQmtSM3hhTEJWdmI5OGRCWk1XRyJ9LCJleHAiOjE1Njc5MzkxNTEsImlzcyI6ImdvLm1pY3JvLnNydi51c2VyIn0.CSXr9ytgNiApa-mrbhLhr4yfZ3B84jjdtCMhY2hbxUM"
+	token := "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyIjp7ImlkIjoiMmE5ZTRiMzUtZmJjYi00YTI1LWI3YTEtOGNiY2NhNGFmYzM2IiwibmFtZSI6IkV3YW4gVmFsZW50aW5lIiwiY29tcGFueSI6IkJCQyIsImVtYWlsIjoiZXdhbi52YWxlbnRpbmU4OUBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYSQxMCRCaEtkRmt5VUx4Q0dIck9SM3d4SjBPZ3A5bE5YVUs4V3lHOEI3cnZTQTdiZTRIOWVsYm1hMiJ9LCJleHAiOjE1NjgwMjI5NDEsImlzcyI6ImdvLm1pY3JvLnNydi51c2VyIn0.bQ9hv4-Yq19KPDwIXccTcIFki9YnyDFjHS7A7U9B_GQ"
 	if len(os.Args) > 1 {
 		infoFile = os.Args[1]
-		token = os.Args[2]
+		//token = os.Args[2]
 	}
 
 	// 解析货物信息
@@ -77,7 +77,7 @@ func main() {
 	// 新货物是否托运成功
 	log.Printf("created:%t\n", resp.Created)
 	// 列出目前所有托运的货物
-	resp, err = client.GetConsignments(context.Background(), &pb.GetRequest{})
+	resp, err = client.GetConsignments(tokenContext, &pb.GetRequest{})
 	if err != nil {
 		log.Fatalf("failed to list consignments:%v\n", err)
 	}
