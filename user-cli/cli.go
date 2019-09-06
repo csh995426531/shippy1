@@ -44,11 +44,15 @@ func main() {
 			//email := c.String("email")
 			//password := c.String("password")
 			//company := c.String("company")
+			name := "Ewan Valentine"
+			email := "ewan.valentine89@gmail.com"
+			password := "Testing123"
+			company := "BBC"
 			user := pb.User{
-				Name:                 "Ewan Valentine",
-				Company:              "BBC",
-				Email:                "ewan.valentine89@gmail.com",
-				Password:             "Testing123",
+				Name:                 name,
+				Company:              company,
+				Email:                email,
+				Password:             password,
 			}
 
 			r, err := client.Create(context.TODO(), &user)
@@ -66,6 +70,16 @@ func main() {
 			for _, v := range getAll.Users {
 				log.Println(v)
 			}
+
+			authResp, err := client.Auth(context.TODO(), &pb.User{
+				Email: email,
+				Password: password,
+			})
+
+			if err != nil {
+				log.Fatalf("auth failed: %v", err)
+			}
+			log.Println("token:", authResp.Token)
 			os.Exit(0)
 		}),
 	)

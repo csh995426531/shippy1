@@ -20,7 +20,7 @@ func main() {
 
 	repo := &UserRepository{db}
 
-	//tokenService := &
+	tokenService := &TokenService{repo}
 
 	server := micro.NewService(
 		micro.Name("go.micro.srv.user"),
@@ -29,7 +29,7 @@ func main() {
 
 	server.Init()
 
-	pb.RegisterUserServiceHandler(server.Server(), &handler{repo})
+	pb.RegisterUserServiceHandler(server.Server(), &handler{repo, tokenService})
 
 	if err := server.Run(); err != nil {
 		fmt.Println(err)

@@ -9,6 +9,7 @@ import (
 
 type handler struct {
 	repo Repository
+	tokenService Authable
 }
 
 func (h *handler) Create(ctx context.Context, req *pb.User, resp *pb.Response) error {
@@ -47,16 +48,20 @@ func (h *handler) GetAll(ctx context.Context, req *pb.Request, resp *pb.Response
 }
 
 func (h *handler) Auth(ctx context.Context, req *pb.User, resp *pb.Token) error {
-	_, err := h.repo.GetByEmailAndPassword(req)
+	u, err := h.repo.GetByEmail(req.Email)
 	if err != nil {
 		return err
 	}
 
-	if err := bcrypt.CompareHashAndPassword([]byte(req.Password), []byte(req.Password)); err != nil {
+	if err := bcrypt.CompareHashAndPassword([]byte(u.Password), []byte(req.Password)); err != nil {
 		return err
 	}
 
-	resp.Token = "`x_2nam"
+	token,err := h.tokenService.Encode(u)
+	if err != nil {
+		return err
+	}
+	resp.Token = token
 	return nil
 }
 

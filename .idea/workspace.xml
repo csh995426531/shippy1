@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4190fa5d-544f-4037-9317-9fdb8304073f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/token_service.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consignment-cli/cli.go" beforeDir="false" afterPath="$PROJECT_DIR$/consignment-cli/cli.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-cli/cli.go" beforeDir="false" afterPath="$PROJECT_DIR$/user-cli/cli.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-cli/user-cli" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-cli/user-cli" beforeDir="false" afterPath="$PROJECT_DIR$/user-cli/user-cli" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/handler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/repository.go" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/repository.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/token_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/token_service.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/user-service" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/user-service" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
