@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4190fa5d-544f-4037-9317-9fdb8304073f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/email-service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/email-service/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/email-service/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/email-service/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/email-service/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/handler.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/user-service" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/user-service" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

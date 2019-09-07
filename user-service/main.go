@@ -29,9 +29,9 @@ func main() {
 
 	server.Init()
 
-	pubsub := server.Server().Options().Broker
+	publisher := micro.NewPublisher(topic, server.Client())
 
-	pb.RegisterUserServiceHandler(server.Server(), &handler{repo, tokenService, pubsub})
+	pb.RegisterUserServiceHandler(server.Server(), &handler{repo, tokenService, publisher})
 
 	if err := server.Run(); err != nil {
 		fmt.Println(err)
