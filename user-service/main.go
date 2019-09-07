@@ -29,7 +29,9 @@ func main() {
 
 	server.Init()
 
-	pb.RegisterUserServiceHandler(server.Server(), &handler{repo, tokenService})
+	pubsub := server.Server().Options().Broker
+
+	pb.RegisterUserServiceHandler(server.Server(), &handler{repo, tokenService, pubsub})
 
 	if err := server.Run(); err != nil {
 		fmt.Println(err)

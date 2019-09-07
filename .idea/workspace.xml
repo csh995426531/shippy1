@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4190fa5d-544f-4037-9317-9fdb8304073f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/email-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/email-service/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/email-service/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consignment-cli/cli.go" beforeDir="false" afterPath="$PROJECT_DIR$/consignment-cli/cli.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consignment-cli/consignment-cli" beforeDir="false" afterPath="$PROJECT_DIR$/consignment-cli/consignment-cli" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consignment-service/consignment-service" beforeDir="false" afterPath="$PROJECT_DIR$/consignment-service/consignment-service" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consignment-service/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/consignment-service/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/handler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/user-service" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/user-service" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,15 +37,16 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/email-service" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Golang\MyGO\src\shippy\user-cli" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Golang\MyGO\src\shippy\consignment-service" />
       <recent name="D:\Golang\MyGO\src\shippy" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Golang\MyGO\src\shippy\email-service" />
+      <recent name="D:\Golang\MyGO\src\shippy\user-cli" />
     </key>
   </component>
   <component name="RunDashboard">
